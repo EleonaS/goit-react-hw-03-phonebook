@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Button } from 'Components/Form/Form.styled';
 
 const ContactsListItem = ({
@@ -20,5 +20,13 @@ const ContactsListItem = ({
     </Button>
   </>
 );
+
+ContactsListItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  onDeleteContact:
+    PropTypes.func.isRequired,
+};
 
 export { ContactsListItem };
